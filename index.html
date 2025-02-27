@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="map.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  
+  <!-- Map GL JS -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+
+  <!-- Load D3.js (MUST be before map.js) -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <title>Bikewatching</title>
+</head>
+
+<body>
+  <header>
+    <h1>🚴🏼‍♀️ Bikewatching</h1>
+    
+    <!-- Time Filter -->
+    <!-- Time Filter -->
+<div class="time-slider-container">
+    <span>Filter by time:</span>
+    <input type="range" id="time-slider" min="0" max="1439" value="720">
+    <span id="selected-time">11:59 PM</span>
+    <span id="any-time" style="display: none;">Any Time</span> <!-- ✅ Add this -->
+</div>
+
+
+  <!-- Map container with SVG overlay -->
+  <div id="map">
+    <svg></svg>
+  </div>
+
+  <div class="legend">
+    <div style="--departure-ratio: 1">More departures</div>
+    <div style="--departure-ratio: 0.5">Balanced</div>
+    <div style="--departure-ratio: 0">More arrivals</div>
+  </div>
+  
+
+  <!-- Tooltip for displaying station info -->
+  <div id="tooltip" class="tooltip"></div>
+
+  <!-- Mapbox JS -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  <script src="map.js"></script> <!-- Your custom Mapbox + D3 script -->
+
+</body>
+</html>
+
+
+
+
